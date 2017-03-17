@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>IOTAGRICULTURE</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>insertData</servlet-name>
+		<servlet-class>servlet.InsertDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>insertData</servlet-name>
+		<url-pattern>/insertData</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>viewData</servlet-name>
+		<servlet-class>servlet.ViewDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>viewData</servlet-name>
+		<url-pattern>/viewData</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
