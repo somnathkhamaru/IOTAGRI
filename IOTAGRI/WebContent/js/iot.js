@@ -109,7 +109,7 @@ $(document).ready(function(){
 					}
 					else{
 						
-						$("#Graphview").html("No Records found for graphical representation");
+						$("#chart_div").html("No Records found for graphical representation");
 						$("#Tabview").html("No Records found for tabular representation");
 						$("#loader").gSpinner("hide");
 
