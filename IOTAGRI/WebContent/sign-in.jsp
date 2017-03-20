@@ -4,6 +4,9 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<c:url value="/" var="postUrl" />
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -52,17 +55,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="signin">
 							
-							<form>
+							<form action="<%=request.getContextPath()%>/login" method="post">
 							<div class="log-input">
 								<div class="log-input-left">
-								   <input type="text" class="user" value="Yourname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+								   <input type="text" class="user" id="id" name="id" value="id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
 								</div>
 								
 								<div class="clearfix"> </div>
 							</div>
 							<div class="log-input">
 								<div class="log-input-left">
-								   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+								   <input type="password" class="lock" name="password"  id="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
 								</div>
 								
 								<div class="clearfix"> </div>
