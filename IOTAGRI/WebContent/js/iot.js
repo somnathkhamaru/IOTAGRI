@@ -86,7 +86,7 @@ $(document).ready(function(){
 					if(len!=0)
 					{
 						var hed1='<h3>TABULAR VIEW OF '+type.toUpperCase()+'</h3><table  class="table table-bordered" style="margin-bottom: 2px; margin-left: 10%;width: 79%">';
-						var hed2='<thead> <tr class="headings"><th >RECORD_NO </th><th>'+type.toUpperCase()+'</th><th >Time Stamp</th></tr></thead>';
+						var hed2='<thead> <tr class="headings"><th >RECORD_NO </th><th>'+type.toUpperCase()+'</th><th >TIME_STAMP</th></tr></thead>';
 						var hed3='<tbody id="mainTable">';
 						var hed6='</tbody></table><br><br>'
 						$("#Tabview").append(hed1+hed2+hed3+hed6)

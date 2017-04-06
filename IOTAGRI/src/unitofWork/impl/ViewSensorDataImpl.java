@@ -63,6 +63,17 @@ public class ViewSensorDataImpl implements ViewSensorData {
 						sqlStatement = "select * from DASH11787.iot_MOISTURE where date(TIME_STAMP) BETWEEN '"+startDate+"' AND '"+endDate+"'";
 					}
 				}
+				else if (type.equalsIgnoreCase("salinity"))
+				{
+					if(endDate==null || endDate.trim().isEmpty())
+					{
+						sqlStatement = "select * from DASH11787.iot_SALINITY where date(TIME_STAMP) = '"+startDate+"'";
+					}
+					else
+					{
+						sqlStatement = "select * from DASH11787.iot_SALINITY where date(TIME_STAMP) BETWEEN '"+startDate+"' AND '"+endDate+"'";
+					}
+				}
 				System.out.println(sqlStatement);
 				ResultSet rs = stmt.executeQuery(sqlStatement);
 				int i = 0;
@@ -86,6 +97,13 @@ public class ViewSensorDataImpl implements ViewSensorData {
 					{
 					sData.setValue(rs.getString("MOISTURE"));
 					sData.setParameter("MOISTURE");
+					sData.setEntryID(rs.getString("RECORD NO"));
+					sData.setTimeStamp(rs.getString("TIME_STAMP"));;
+					}
+					else if(type.equalsIgnoreCase("salinity"))
+					{
+					sData.setValue(rs.getString("SALINITY"));
+					sData.setParameter("SALINITY");
 					sData.setEntryID(rs.getString("RECORD NO"));
 					sData.setTimeStamp(rs.getString("TIME_STAMP"));;
 					}

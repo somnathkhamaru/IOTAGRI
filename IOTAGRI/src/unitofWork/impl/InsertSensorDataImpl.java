@@ -49,6 +49,14 @@ public class InsertSensorDataImpl implements InsertSensorData {
 					con.commit();
 					con.close();
 				}
+				else if (type.equalsIgnoreCase("salinity"))
+				{
+					sqlStatement = "INSERT into  DASH11787.IOT_SALINITY ( SALINITY,TIME_STAMP) values("+value+",current timestamp)";
+					System.out.println(sqlStatement);
+					stmt.executeUpdate(sqlStatement);
+					con.commit();
+					con.close();
+				}
 			
 			} catch (SQLException e) {
 				System.out.println(e);

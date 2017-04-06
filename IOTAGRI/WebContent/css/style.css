@@ -2666,7 +2666,7 @@ i.dollar1{
   background-color: #fff !important;
 }
 .col_4, .col_5{
-	padding-left:0;
+	padding-left: 10%;
 }
 .map_container,.bs-example5,.panel_2,.content-box-wrapper,.grid_1,.grid_3,.no-padding,.bs-example4,.panel-body1,.editor,.banner-bottom-video-grid-left, #chart,.online,.widget_middle_left_slider,.grd_tble, .span_6, .col_2, .weather_list, .cal1, .skills-info, .stats-info, .r3_counter_box, .activity_box, .bs-example1, .cloud, .copy{
   -ms-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
